@@ -4,6 +4,15 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * 
+ * @Name  : TestMain
+ * @Author : LH
+ * @Date : 2018年6月18日 下午5:27:09
+ * @Version : V1.0
+ * 
+ * @Description :
+ */
 public class TestMain {
 		
 				 @Test
@@ -35,5 +44,9 @@ public class TestMain {
 	
 			      car  = (Car) context.getBean("car2");
 			      System.out.println(car);
+			      
+			      Person person = (Person) context.getBean("person");
+			      System.out.println(person);
+			      
 				 }
 }

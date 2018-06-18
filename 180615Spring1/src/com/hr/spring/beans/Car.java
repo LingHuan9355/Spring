@@ -8,6 +8,22 @@ public class Car {
 				private int maxSpeed;
 				
 				
+				
+				
+				public void setPrice(double price) {
+					this.price = price;
+				}
+				
+				
+
+
+				public void setMaxSpeed(int maxSpeed) {
+					this.maxSpeed = maxSpeed;
+				}
+
+
+
+
 				public Car(String brand, String corp, double price) {
 					super();
 					this.brand = brand;
