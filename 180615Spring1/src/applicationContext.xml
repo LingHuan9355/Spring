@@ -4,8 +4,37 @@
 			xsi:schemaLocation="http://www.springframework.org/schema/beans 
 			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
 
-			<!-- 配置bean -->
-			<bean id="helloWorld" class="com.hr.spring.beans.HelloWorld">
+			<!-- 通过 setter 方法注入配置bean  
+			    class :bean的全类名，通过反射的方式在 IOC 容器中创建 Bean，所以要求Bean 中必须要有无参的构造器
+			    id：标识容器中的bean， id唯一。
+			-->
+			<bean id="helloWorld2" class="com.hr.spring.beans.HelloWorld">
 			   <property name="name2"  value="Spring"></property>
 			</bean>
+			
+			<!-- 通过构造方法来配置Bean的属性 -->
+			<bean id="car" class="com.hr.spring.beans.Car">
+						<!-- 按索引匹配入参 -->
+			     		<constructor-arg value="Audi" index="0"></constructor-arg>
+			     		<constructor-arg value="shanghai"  index="1"></constructor-arg>
+			     		<constructor-arg value="300000"  type="double"></constructor-arg>
+			</bean>
+			
+			<!-- 使用构造器注入属性值可以指定参数的位置和参数的类型！区分重载的构造器 -->
+			<bean id="car2" class="com.hr.spring.beans.Car">
+					<!-- 按类型匹配入参 -->
+			   		<constructor-arg value="Baoma"  type="java.lang.String"></constructor-arg>
+			   		<constructor-arg value="Shanghai"  type="java.lang.String"></constructor-arg>
+			   		<constructor-arg value="240"  type="int"></constructor-arg>
+			</bean>
+			
+			<!-- <bean id="helloWorld" class="com.hr.spring.beans.HelloWorld">
+			   <property name="name2"  value="Spring2"></property>
+			</bean>
+			 -->
+			 
+			 
+			 
+			 
+			
 </beans>
