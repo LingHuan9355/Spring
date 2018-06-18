@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xmlns:util="http://www.springframework.org/schema/util"
+            xmlns:p="http://www.springframework.org/schema/p"
+			xsi:schemaLocation="
+			http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+			http://www.springframework.org/schema/util 
+			http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+		<bean id="address" class="com.hr.spring.beans.autowire.Address"
+					p:city="Beijing" p:street="HuiLongGuan"></bean>
+			 
+		<!-- <bean id="address2" class="com.hr.spring.beans.autowire.Address"
+					p:city="Dalian" p:street="ZhongShan"></bean> -->
+			 
+		<bean id="car" class="com.hr.spring.beans.autowire.Car"
+					p:brand="Audi" p:price="30000"></bean>
+			 
+		<!-- <bean id="person" class="com.hr.spring.beans.autowire.Person"
+				  p:name="Tom"	p:address-ref="address"  p:car-ref="car"></bean> -->
+			 
+	<!--可以使用 autowire 属性指定自动装配的方式，
+		byName 根据bean 的名字和当前 bean 的setter 风格的属性名进行自动装配，若有匹配的，则进行自动装配，若没有匹配的，则不装配
+		byType   根据bean 的类型和当前 bean 的属性类型进行自动装配，若 IOC 容器中有一个以上的类型匹配的bean则抛异常	
+	-->
+		<bean id="person" class="com.hr.spring.beans.autowire.Person"
+				  p:name="Tom"	autowire="byName"></bean>
+</beans>
