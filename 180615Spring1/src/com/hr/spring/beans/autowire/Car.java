@@ -6,6 +6,9 @@ public class Car {
 	    private String brand;
 	    private double price;
 		
+	    public Car() {
+	    		System.out.println("Car's Constructor....");
+	    }
 	    
 	    public String getBrand() {
 			return brand;

@@ -109,7 +109,7 @@
 									<!-- 使用props和prop子节点来为Properties属性赋值 -->
 									<props>
 											<prop key="driverClass" >com.mysql.jdbc.Driver</prop>
-											<prop key="jdbcUrl" >jdbc:mysql///test</prop>
+											<prop key="jdbcUrl" >jdbc:mysql://localhost:3306/test</prop>
 											<prop key="user" >root</prop>
 											<prop key="password" >admin</prop>
 									</props>
