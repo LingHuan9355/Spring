@@ -10,10 +10,10 @@ import com.hr.spring.beans.cycle.Car;
  * 
  * @Name  : TestCycle8
  * @Author : LH
- * @Date : 2018年6月20日 上午12:29:53
+ * @Date : 2018~{Dj~}6~{TB~}20~{HU~} ~{IONg~}12:29:53
  * @Version : V1.0
  * 
- * @Description :
+ * @Description :IOC ~{H]FwVP~} Bean ~{5DIzC|V\FZ7=7(~}
  */
 public class TestCycle8 {
 
@@ -26,7 +26,7 @@ public class TestCycle8 {
 		        	Car	car = (Car) context.getBean("car");
 		        	System.out.println(car );
 		        	
-		        	//关闭IOC容器
+		        	//~{9X1U~}IOC~{H]Fw~}
 		        	context.close();
 			}
 
