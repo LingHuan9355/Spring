@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xmlns:context="http://www.springframework.org/schema/context"
+			xsi:schemaLocation="
+			http://www.springframework.org/schema/beans 
+			http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+
+			<!-- 指定 Spring IOC 容器扫描的包 -->
+			<!--如果仅希望扫描特定的类而非基包下的所有类，可使用 resource-pattern 属性过滤特定的类 
+			      例： resource-pattern="repository/*.class"
+			-->
+			<!-- <context:component-scan 
+						base-package="com.hr.spring.beans.annotation"
+						resource-pattern="repository/*.class">
+			</context:component-scan> -->
+			
+			<!-- <context:exclude-filter> 子节点表示要排除在外的目标类 -->
+			<!-- <context:include-filter> 子节点表示要包含的目标类,该子节点需要 use-default-filters="false" 配合使用 -->
+			<context:component-scan 
+										base-package="com.hr.spring.beans.annotation"
+										use-default-filters="false">
+						<!-- <context:exclude-filter type="annotation" 
+											expression="org.springframework.stereotype.Repository"/> -->
+						<!-- <context:include-filter type="annotation" 
+											expression="org.springframework.stereotype.Repository"/> -->
+											
+						<!-- 	  <context:exclude-filter type="assignable" 
+							  expression="com.hr.spring.beans.annotation.repository.UserRepository"/>	 -->
+							  	<context:include-filter type="assignable" 
+											expression="com.hr.spring.beans.annotation.repository.UserRepository"/>		
+			</context:component-scan>
+  			
+</beans>

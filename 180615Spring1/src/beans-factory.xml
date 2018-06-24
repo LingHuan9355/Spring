@@ -4,9 +4,9 @@
             xmlns:util="http://www.springframework.org/schema/util"
 			xsi:schemaLocation="
 			http://www.springframework.org/schema/beans 
-			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+			http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
 			http://www.springframework.org/schema/util 
-			http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 			<!-- 通过静态工厂方法来配置 bean，注意不是配置静态工厂方法的实例，而是配置bean 实例 -->
 			<!-- class 属性：指向静态工厂方法的全类名

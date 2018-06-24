@@ -4,9 +4,9 @@
             xmlns:util="http://www.springframework.org/schema/util"
 			xsi:schemaLocation="
 			http://www.springframework.org/schema/beans 
-			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+			http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
 			http://www.springframework.org/schema/util 
-			http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+			http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 			<!-- 使用bean 的 scope 属性来配置 bean的作用域
 					singleton：默认值，容器初始时创建bean的实例，在整个生命周期里只创建这一个bean。单例的。
