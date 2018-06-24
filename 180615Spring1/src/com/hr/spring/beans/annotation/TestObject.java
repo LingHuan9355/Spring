@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
  * @Description :
  */
 
-@Component
 public class TestObject {
 
 

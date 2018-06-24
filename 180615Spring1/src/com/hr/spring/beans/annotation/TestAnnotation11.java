@@ -26,19 +26,19 @@ public class TestAnnotation11 {
 			public void test() {
 					ApplicationContext context = new ClassPathXmlApplicationContext("beans-annotation.xml");
 					
-					/*TestObject testObject = (TestObject) context.getBean("testObject");
+				/*	TestObject testObject = (TestObject) context.getBean("testObject");
 					System.out.println(testObject);
 					
-					UserController userController = (UserController) context.getBean("userController");
-					System.out.println(userController);
 					
 					UserService userService = (UserService) context.getBean("userService");
 					System.out.println(userService);
-					*/
+					
 					UserRepository userRepository = (UserRepository) context.getBean("userRepository");
-					System.out.println(userRepository);
+					System.out.println(userRepository);*/
 					
-					
+					UserController userController = (UserController) context.getBean("userController");
+					System.out.println(userController);
+					userController.execute();
 		        	
 		        	
 			}
