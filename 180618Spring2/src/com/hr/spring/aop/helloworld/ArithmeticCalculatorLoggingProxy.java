@@ -59,8 +59,18 @@ public class ArithmeticCalculatorLoggingProxy {
 						//~{HUV>~}
 						System.out.println("ATGUIGU->The method " + methodName + " begins  with " + Arrays.asList(args)) ;
 						//~{V4PP7=7(~}
-						Object result = method.invoke(target, args);
-						//~{HUV>~}
+						Object result = null; 
+						try {
+							//~{G0VCM(V*~}
+							result =	method.invoke(target, args);
+						   //~{75;XM(V*#,?IRT7CNJ5=7=7(5D75;XV5~}
+						}catch (Exception e) {
+						   e.printStackTrace();
+						   //~{Rl3#M(V*#,?IRT7CNJ5=7=7(3vOV5DRl3#~}	
+						}
+						 //~{:sVCM(V*#,RrN*7=7(?ID\;a3vOVRl3##,KyRT7CNJ2;5=7=7(5D75;XV5~}
+						
+								//~{HUV>~}
 						System.out.println("ATGUIGU->The method " + methodName+ " ends with " + result);
 						
 						return result;
