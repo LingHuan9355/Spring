@@ -21,7 +21,7 @@ public class TestAdvice1 {
 				     
 				     ArithmeticCalculator arithmeticCalculator = (ArithmeticCalculator) applicationContext.getBean("arithmeticCalculator");
 				
-				     System.out.println(arithmeticCalculator.getClass().getName());
+				     //System.out.println(arithmeticCalculator.getClass().getName());
 				     
 				     int result = arithmeticCalculator.add(1, 1);
 				     System.out.println("result: " + result);
