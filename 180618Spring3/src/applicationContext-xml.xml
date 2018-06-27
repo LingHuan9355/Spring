@@ -25,6 +25,7 @@
 			   			<!-- 配置切点表达式 -->
 			   			<aop:pointcut expression="execution( *  com.hr.spring.aop.xml.ArithmeticCalculator.*(int, int ))" 
 			   						id="pointcut" />
+			   			<!-- 配置切面及通知 -->			
 			   			<aop:aspect ref="loggingAspect" order="2">
 			   						<aop:before method="beforeMethod"  pointcut-ref="pointcut"/>
 									<aop:after method="afterMethod" pointcut-ref="pointcut"/>
