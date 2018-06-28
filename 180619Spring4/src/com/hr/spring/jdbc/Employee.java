@@ -4,7 +4,7 @@ package com.hr.spring.jdbc;
  * 
  * @Name  : Employee
  * @Author : LH
- * @Date : 2018年6月28日 上午12:01:32
+ * @Date : 2018~{Dj~}6~{TB~}28~{HU~} ~{IONg~}12:01:32
  * @Version : V1.0
  * 
  * @Description :
@@ -16,7 +16,7 @@ public class Employee {
 					private String lastName;
 					private String email;
 			
-					private  Department department;
+					private  Integer deptId;
 
 					
 					public Integer getId() {
@@ -43,19 +43,20 @@ public class Employee {
 						this.email = email;
 					}
 
-					public Department getDepartment() {
-						return department;
+					public Integer getDeptId() {
+						return deptId;
 					}
 
-					public void setDepartment(Department department) {
-						this.department = department;
+					public void setDeptId(Integer deptId) {
+						this.deptId = deptId;
 					}
 
 					@Override
 					public String toString() {
-						return "Employee [id=" + id + ", lastName=" + lastName + ", email=" + email + ", department="
-								+ department + "]";
+						return "Employee [id=" + id + ", lastName=" + lastName + ", email=" + email + ", deptId="
+								+ deptId + "]";
 					}
+
 					
 					
 					

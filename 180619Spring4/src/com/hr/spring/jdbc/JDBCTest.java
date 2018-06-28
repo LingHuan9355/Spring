@@ -2,7 +2,9 @@ package com.hr.spring.jdbc;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -12,6 +14,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
 /**
  * 
@@ -28,12 +33,50 @@ public class JDBCTest {
 				private JdbcTemplate jdbcTemplate ;
 				private EmployeeDao employeeDao;
 				private DepartmentDao departmentDao;
+				private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 				
 				{
 					context = new ClassPathXmlApplicationContext("applicationContext.xml");
 					jdbcTemplate = (JdbcTemplate) context.getBean("jdbcTemplate");
 					employeeDao = context.getBean(EmployeeDao.class);
 					departmentDao = context.getBean(DepartmentDao.class);
+					namedParameterJdbcTemplate = context.getBean(NamedParameterJdbcTemplate.class);
+				}
+				
+				/**
+				 * 使用具名参数时可以使用，update(String sql, SqlParameterSource paramSource) 方法进行更新操作
+				 *1.SQL 语句中的参数和类的属性一致
+				 *2.使用 SqlParameterSource 的 BeanPropertySqlParameterSource 实现类作为参数。
+				 */
+				@Test
+				public void testNamedParameterJdbcTemplate2() {
+					String sql ="insert into employee (LAST_NAME,EMAIL,DEPT_ID) values( :lastName , :email, :deptId)";
+							
+					Employee employee = new Employee();
+						employee.setLastName("XYZ");
+						employee.setEmail("xyz@sina.com");
+						employee.setDeptId(4);
+						
+					SqlParameterSource paramSource = new BeanPropertySqlParameterSource(employee);
+					
+					namedParameterJdbcTemplate.update(sql, paramSource);
+				}
+				
+				/**
+				 * 使用具名参数：可以为参数起名字，
+				 * 1.优点：若有多个参数，则不用再去对应位置，直接对象参数名字，便于维护
+				 * 2.缺点：较为麻烦
+				 */
+				@Test 
+				public void testNamedParameterJdbcTemplate() {
+					String sql ="insert into employee (LAST_NAME,EMAIL,DEPT_ID) values( :ln , :email, :deptid)";
+					
+					Map<String, Object> map = new HashMap<>();
+					map.put("ln", "Ksana");
+					map.put("email", "ksana@sina.com");
+					map.put("deptid", 4);
+					
+					namedParameterJdbcTemplate.update(sql, map);
 				}
 
 				@Test
