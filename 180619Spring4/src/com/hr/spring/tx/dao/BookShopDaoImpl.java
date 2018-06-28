@@ -17,7 +17,7 @@ import com.hr.spring.tx.exception.UserAccountException;
  * @Description :
  */
 @Repository("bookShopDao")
-public class BookShowImpl implements BookShopDao {
+public class BookShopDaoImpl implements BookShopDao {
 
 			@Autowired
 			private JdbcTemplate jdbcTemplate;
