@@ -7,7 +7,7 @@ import org.junit.Test;
  * 
  * @Name  : TestArithmeticCalculator1
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}25~{HU~} ~{OBNg~}4:30:11
+ * @Date : 2018年6月25日 下午4:30:11
  * @Version : V1.0
  * 
  * @Description :
@@ -25,7 +25,7 @@ public class TestArithmeticCalculator1 {
 				ArithmeticCalculator target = new ArithmeticCalculatorImpl();
 				ArithmeticCalculator proxy = new ArithmeticCalculatorLoggingProxy(target).getLoggingProxy();
 				
-				//~{4z@m6TOs~}
+				//�������
 				System.out.println(proxy.getClass().getName());
 				
 				int result =  proxy.add(1, 2);

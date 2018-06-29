@@ -4,10 +4,10 @@ package com.hr.spring.aop.helloworld;
  * 
  * @Name  : AtithmeticCalculatorImpl
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}25~{HU~} ~{OBNg~}4:22:34
+ * @Date : 2018年6月25日 下午4:22:34
  * @Version : V1.0
  * 
- * @Description :  ~{PhGs~}1-~{HUV>#:TZ3LPrV4PPFZ<dW7WYU}TZ7"Iz5D;n6/~} ~{#,J5OV<S<u3K3}7=7(~}
+ * @Description :  需求1-日志：在程序执行期间追踪正在发生的活动 ，实现加减乘除方法
  */
 public class ArithmeticCalculatorLoggingImpl implements ArithmeticCalculator {
 

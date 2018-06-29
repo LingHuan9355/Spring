@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @Name  : TestAspectJ2
  * @Author : LH
- * @Date : 2018Äê6ÔÂ25ÈÕ ÏÂÎç9:44:02
+ * @Date : 2018å¹´6æœˆ25æ—¥ ä¸‹åˆ9:44:02
  * @Version : V1.0
  * 
  * @Description :
@@ -18,13 +18,13 @@ public class TestAspectJ2 {
 
 			@Test
 			public void test() {
-				//1.´´½¨Spring µÄ IOC ÈİÆ÷
+				//1.åˆ›å»ºSpring çš„ IOC å®¹å™¨
 				ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 				
-				//2.´Ó IOC ÈİÆ÷ ÖĞ»ñÈ¡ bean µÄÊµÀı
+				//2.ä» IOC å®¹å™¨ ä¸­è·å– bean çš„å®ä¾‹
 				ArithmeticCalculator arithmeticCalculator = applicationContext.getBean(ArithmeticCalculator.class);
 				
-				//3.Ê¹ÓÃBean
+				//3.ä½¿ç”¨Bean
 				int result = arithmeticCalculator.add(3, 6);
 				System.out.println("result: " + result);
 			

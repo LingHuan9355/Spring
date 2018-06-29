@@ -9,23 +9,23 @@ import java.util.Arrays;
  * 
  * @Name  : ArithmeticCalculatorLoggingProxy
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}25~{HU~} ~{OBNg~}4:38:45
+ * @Date : 2018年6月25日 下午4:38:45
  * @Version : V1.0
  * 
- * @Description : ~{J9SC6/L,4z@m=b>v~}
- * ~{4zBk;lBR#:T=@4T=6`5D7GR5NqPhGs~}(~{HUV>:MQiV$5H~})~{<SHk:s~}, ~{T-SP5DR5Nq7=7(<1>gErUM~}. 
- *  ~{C?8v7=7(TZ4&@m:KPDB_<-5DM,J1;91XPk<f9KFdK{6`8v9XW"5c~}. 
- *  ~{4zBk7VI"~}: ~{RTHUV>PhGsN*@}~}, ~{V;JGN*AKBzWcUb8v5%R;PhGs~}, ~{>M2;5C2;TZ6`8vD#?i#(7=7(#)~}
- *  ~{@o6`4NVX84O`M,5DHUV>4zBk~}. ~{Hg9{HUV>PhGs7"Iz1d;/~}, ~{1XPkP^8DKySPD#?i~}.
+ * @Description : 使用动态代理解决
+ * 代码混乱：越来越多的非业务需求(日志和验证等)加入后, 原有的业务方法急剧膨胀. 
+ *  每个方法在处理核心逻辑的同时还必须兼顾其他多个关注点. 
+ *  代码分散: 以日志需求为例, 只是为了满足这个单一需求, 就不得不在多个模块（方法）
+ *  里多次重复相同的日志代码. 如果日志需求发生变化, 必须修改所有模块.
  *  
  *  
- *  ~{4z@mIh<FD#J=5DT-@m~}: ~{J9SCR;8v4z@m=+6TOs0|W0Fp@4~}, ~{H;:sSC8C4z@m6TOsH!4zT-J<6TOs~}. 
- *  ~{HN:N6TT-J<6TOs5D5wSC6<R*M(9}4z@m~}. ~{4z@m6TOs>v6(JG7qRT<0:NJ1=+7=7(5wSCW*5=T-J<6TOsIO~}.
+ *  代理设计模式的原理: 使用一个代理将对象包装起来, 然后用该代理对象取代原始对象. 
+ *  任何对原始对象的调用都要通过代理. 代理对象决定是否以及何时将方法调用转到原始对象上.
  */
 public class ArithmeticCalculatorLoggingProxy {
 
 	
-			//~{R*4z@m5D6TOs~}
+			//Ҫ����Ķ���
 			private ArithmeticCalculator target;
 			
             
@@ -40,37 +40,37 @@ public class ArithmeticCalculatorLoggingProxy {
 			public  ArithmeticCalculator getLoggingProxy() {
 				ArithmeticCalculator proxy = null;
 				
-				//~{4z@m6TOsSIDDR;8v@`<STXFw8:Tp<STX~}
+				//�����������һ����������������
 				ClassLoader loader = target.getClass().getClassLoader();
-				//~{4z@m6TOs5D@`PM#,<4FdVPSPDGP)7=7(~}
+				//�����������ͣ�����������Щ����
 				Class [] interfaces = new Class[] {ArithmeticCalculator.class};
-				//~{515wSC4z@m6TOsFdVP5D7=7(J1#,8CV4PP5D4zBk~}
+				//�����ô���������еķ���ʱ����ִ�еĴ���
 				InvocationHandler invocationHandler = new InvocationHandler() {
 					
 					/**
-					 * proxy : ~{U}TZ75;X5D4z@m6TOs#,R;0cGi?vOB#,TZ~}invoke ~{7=7(VP6<2;J9SC8C6TOs!#;a2zIzK@Q-;7#,DZ4fRg3v~}
-					 * method ~{#:U}TZ1;5wSC5D7=7(~}
-					 * args~{#:~} ~{5wSC7=7(J1#,4+Hk5D2NJ}~}
+					 * proxy : ���ڷ��صĴ������һ������£���invoke �����ж���ʹ�øö��󡣻������ѭ�����ڴ����
+					 * method �����ڱ����õķ���
+					 * args�� ���÷���ʱ������Ĳ���
 					 */
 					@Override
 					public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 						String methodName= method.getName();
 						
-						//~{HUV>~}
+						//��־
 						System.out.println("ATGUIGU->The method " + methodName + " begins  with " + Arrays.asList(args)) ;
-						//~{V4PP7=7(~}
+						//ִ�з���
 						Object result = null; 
 						try {
-							//~{G0VCM(V*~}
+							//ǰ��֪ͨ
 							result =	method.invoke(target, args);
-						   //~{75;XM(V*#,?IRT7CNJ5=7=7(5D75;XV5~}
+						   //����֪ͨ�����Է��ʵ������ķ���ֵ
 						}catch (Exception e) {
 						   e.printStackTrace();
-						   //~{Rl3#M(V*#,?IRT7CNJ5=7=7(3vOV5DRl3#~}	
+						   //�쳣֪ͨ�����Է��ʵ��������ֵ��쳣	
 						}
-						 //~{:sVCM(V*#,RrN*7=7(?ID\;a3vOVRl3##,KyRT7CNJ2;5=7=7(5D75;XV5~}
+						 //����֪ͨ����Ϊ�������ܻ�����쳣�����Է��ʲ��������ķ���ֵ
 						
-								//~{HUV>~}
+								//��־
 						System.out.println("ATGUIGU->The method " + methodName+ " ends with " + result);
 						
 						return result;
