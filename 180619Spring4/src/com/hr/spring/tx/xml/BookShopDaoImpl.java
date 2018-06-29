@@ -9,7 +9,7 @@ import com.hr.spring.tx.xml.UserAccountException;
  * 
  * @Name  : BookShowImpl
  * @Author : LH
- * @Date : 2018Äê6ÔÂ28ÈÕ ÏÂÎç6:46:44
+ * @Date : 2018å¹´6æœˆ28æ—¥ ä¸‹åˆ6:46:44
  * @Version : V1.0
  * 
  * @Description :
@@ -23,7 +23,7 @@ public class BookShopDaoImpl implements BookShopDao {
 			}
 			
 			/**
-			 * //¸ù¾İÊéºÅ»ñÈ¡ÊéµÄµ¥¼Û
+			 * //æ ¹æ®ä¹¦å·è·å–ä¹¦çš„å•ä»·
 			 */
 			@Override
 			public int findBookPriceByIsbn(String isbn) {
@@ -33,16 +33,16 @@ public class BookShopDaoImpl implements BookShopDao {
 			}
 		
 			/**
-			 * //¸üĞÂÊéµÄ¿â´æ£¬Ê¹ÊéºÅ¶ÔÓ¦µÄ¿â´æ - 1
+			 * //æ›´æ–°ä¹¦çš„åº“å­˜ï¼Œä½¿ä¹¦å·å¯¹åº”çš„åº“å­˜ - 1
 			 */
 			@Override
 			public void updateBookStock(String isbn) {
 					
-					//¼ì²éÊéµÄ¿â´æÊÇ·ñ×ã¹»£¬Èô²»¹»£¬ÔòÅ×³öÒì³£
+					//æ£€æŸ¥ä¹¦çš„åº“å­˜æ˜¯å¦è¶³å¤Ÿï¼Œè‹¥ä¸å¤Ÿï¼Œåˆ™æŠ›å‡ºå¼‚å¸¸
 					String sql= "select stock from book_stock  where isbn = ?";
 					int stock =  jdbcTemplate.queryForObject(sql, Integer.class, isbn);
 					if(stock == 0) {
-						   throw new BookStockException("¿â´æ²»×ã£¡");
+						   throw new BookStockException("åº“å­˜ä¸è¶³ï¼");
 					}
 					
 					String sql2= "update book_stock set stock = stock -1 where isbn = ?";
@@ -50,16 +50,16 @@ public class BookShopDaoImpl implements BookShopDao {
 			}
 
 			/**
-			 * //¸üĞÂÓÃ»§ÕË»§Óà¶î£¬Ê¹ÓÃÓÃ»§µÄ banlace - price
+			 * //æ›´æ–°ç”¨æˆ·è´¦æˆ·ä½™é¢ï¼Œä½¿ç”¨ç”¨æˆ·çš„ banlace - price
 			 */
 			@Override
 			public void updateUserAccount(String username, int price) {
 				
-				//ÑéÖ¤Óà¶îÊÇ·ñ×ã¹»£¬Èô²»×ã£¬ÔòÅ×Òì³£
+				//éªŒè¯ä½™é¢æ˜¯å¦è¶³å¤Ÿï¼Œè‹¥ä¸è¶³ï¼Œåˆ™æŠ›å¼‚å¸¸
 				String sql = "select balance from account where username = ?";
 			 	int  balance =  jdbcTemplate.queryForObject(sql, Integer.class, username);
 				if(balance  < price ) {
-					throw new UserAccountException("Óà¶î²»×ã£¡");
+					throw new UserAccountException("ä½™é¢ä¸è¶³ï¼");
 				}
 				String sql2 ="update account set balance = balance - ?  where  username = ?";
 				jdbcTemplate.update(sql2, price, username);

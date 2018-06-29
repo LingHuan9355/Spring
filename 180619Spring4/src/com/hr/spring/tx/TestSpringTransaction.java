@@ -1,10 +1,8 @@
 package com.hr.spring.tx;
 
-import static org.junit.Assert.*;
 
 import java.util.Arrays;
 
-import javax.naming.Context;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -17,7 +15,7 @@ import com.hr.spring.tx.service.BookShopService;
  * 
  * @Name  : TestSpringTransaction
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}28~{HU~} ~{OBNg~}10:37:35
+ * @Date : 2018年6月28日 下午10:37:35
  * @Version : V1.0
  * 
  * @Description :
@@ -37,7 +35,7 @@ public class TestSpringTransaction {
 			}
 			
 			/**
-			 * ~{2bJTJBNq5D4+2%PPN*~}
+			 * 测试事务的传播行为
 			 */
 			@Test
 			public void testTransactionalPropagation() {
@@ -46,7 +44,7 @@ public class TestSpringTransaction {
 			
 	
 			/**
-			 * ~{JBNq9\@m#:9:BrJi<.#,?b4f8|PB#,RT<0UK:ES`6n8|PB5DR5Nq2YWw~}
+			 * 事务管理：购买书籍，库存更新，以及账号余额更新的业务操作
 			 */
 			@Test
 			public void testBookShowService() {
@@ -55,7 +53,7 @@ public class TestSpringTransaction {
 			
 			
 			/**
-			 * ~{8y>]Ji:E;qH!Ji5D5%<[~}
+			 * 根据书号获取书的单价
 			 */
 			@Test
 			public void testBookShopDaoFindBookPriceByIsbn() {
@@ -63,7 +61,7 @@ public class TestSpringTransaction {
 			}
 			
 			/**
-			 * ~{8|PBJi5D?b4f#,J9Ji:E6TS&5D?b4f~} - 1
+			 * 更新书的库存，使书号对应的库存 - 1
 			 */
 			@Test
 			public void testBookShopDaoUpdateBookStock() {
@@ -71,7 +69,7 @@ public class TestSpringTransaction {
 			}
 			
 			/**
-			 * ~{8|PBSC;'UK;'S`6n#,J9SCSC;'5D~} banlace - price
+			 * 更新用户账户余额，使用用户的 banlace - price
 			 */
 			@Test
 			public void testBookShopDaoUpdateUserAccount() {

@@ -4,7 +4,7 @@ package com.hr.spring.tx.xml;
  * 
  * @Name  : UserAccountException
  * @Author : LH
- * @Date : 2018Äê6ÔÂ28ÈÕ ÏÂÎç10:57:43
+ * @Date : 2018å¹´6æœˆ28æ—¥ ä¸‹åˆ10:57:43
  * @Version : V1.0
  * 
  * @Description :

@@ -4,7 +4,7 @@ package com.hr.spring.tx.exception;
  * 
  * @Name  : BookStockException
  * @Author : LH
- * @Date : 2018Äê6ÔÂ28ÈÕ ÏÂÎç10:53:45
+ * @Date : 2018å¹´6æœˆ28æ—¥ ä¸‹åˆ10:53:45
  * @Version : V1.0
  * 
  * @Description :

@@ -4,20 +4,20 @@ package com.hr.spring.tx.xml;
  * 
  * @Name  : BookShopDao
  * @Author : LH
- * @Date : 2018Äê6ÔÂ28ÈÕ ÏÂÎç6:41:34
+ * @Date : 2018å¹´6æœˆ28æ—¥ ä¸‹åˆ6:41:34
  * @Version : V1.0
  * 
  * @Description :
  */
 public interface BookShopDao {
 
-			//¸ù¾İÊéºÅ»ñÈ¡ÊéµÄµ¥¼Û
+			//æ ¹æ®ä¹¦å·è·å–ä¹¦çš„å•ä»·
 			public int findBookPriceByIsbn(String isbn);
 			
-			//¸üĞÂÊéµÄ¿â´æ£¬Ê¹ÊéºÅ¶ÔÓ¦µÄ¿â´æ - 1
+			//æ›´æ–°ä¹¦çš„åº“å­˜ï¼Œä½¿ä¹¦å·å¯¹åº”çš„åº“å­˜ - 1
 			public void updateBookStock(String isbn);
 			
-			//¸üĞÂÓÃ»§ÕË»§Óà¶î£¬Ê¹ÓÃÓÃ»§µÄ banlace - price
+			//æ›´æ–°ç”¨æˆ·è´¦æˆ·ä½™é¢ï¼Œä½¿ç”¨ç”¨æˆ·çš„ banlace - price
 			public void updateUserAccount(String username,int price);
 	
 }

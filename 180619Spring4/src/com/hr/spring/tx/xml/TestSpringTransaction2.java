@@ -15,7 +15,7 @@ import com.hr.spring.tx.xml.service.Cashier;
  * 
  * @Name  : TestSpringTransaction
  * @Author : LH
- * @Date : 2018Äê6ÔÂ28ÈÕ ÏÂÎç10:37:35
+ * @Date : 2018å¹´6æœˆ28æ—¥ ä¸‹åˆ10:37:35
  * @Version : V1.0
  * 
  * @Description :
@@ -35,7 +35,7 @@ public class TestSpringTransaction2 {
 			}
 			
 			/**
-			 * ²âÊÔÊÂÎñµÄ´«²¥ĞĞÎª
+			 * æµ‹è¯•äº‹åŠ¡çš„ä¼ æ’­è¡Œä¸º
 			 */
 			@Test
 			public void testTransactionalPropagation() {
@@ -44,7 +44,7 @@ public class TestSpringTransaction2 {
 			
 	
 			/**
-			 * ÊÂÎñ¹ÜÀí£º¹ºÂòÊé¼®£¬¿â´æ¸üĞÂ£¬ÒÔ¼°ÕËºÅÓà¶î¸üĞÂµÄÒµÎñ²Ù×÷
+			 * äº‹åŠ¡ç®¡ç†ï¼šè´­ä¹°ä¹¦ç±ï¼Œåº“å­˜æ›´æ–°ï¼Œä»¥åŠè´¦å·ä½™é¢æ›´æ–°çš„ä¸šåŠ¡æ“ä½œ
 			 */
 			@Test
 			public void testBookShopService() {

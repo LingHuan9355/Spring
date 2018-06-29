@@ -4,7 +4,7 @@ package com.hr.spring.jdbc;
  * 
  * @Name  : Employee
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}28~{HU~} ~{IONg~}12:01:32
+ * @Date : 2018年6月28日 上午12:01:32
  * @Version : V1.0
  * 
  * @Description :

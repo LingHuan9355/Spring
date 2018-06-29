@@ -12,7 +12,7 @@ import com.hr.spring.tx.service.BookShopService;
  * 
  * @Name  : CashierImpl
  * @Author : LH
- * @Date : 2018Äê6ÔÂ28ÈÕ ÏÂÎç11:51:24
+ * @Date : 2018å¹´6æœˆ28æ—¥ ä¸‹åˆ11:51:24
  * @Version : V1.0
  * 
  * @Description :

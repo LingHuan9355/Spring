@@ -22,7 +22,7 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
  * 
  * @Name  : JDBCTest
  * @Author : LH
- * @Date : 2018Äê6ÔÂ27ÈÕ ÏÂÎç11:35:15
+ * @Date : 2018å¹´6æœˆ27æ—¥ ä¸‹åˆ11:35:15
  * @Version : V1.0
  * 
  * @Description :
@@ -44,9 +44,9 @@ public class JDBCTest {
 				}
 				
 				/**
-				 * Ê¹ÓÃ¾ßÃû²ÎÊıÊ±¿ÉÒÔÊ¹ÓÃ£¬update(String sql, SqlParameterSource paramSource) ·½·¨½øĞĞ¸üĞÂ²Ù×÷
-				 *1.SQL Óï¾äÖĞµÄ²ÎÊıºÍÀàµÄÊôĞÔÒ»ÖÂ
-				 *2.Ê¹ÓÃ SqlParameterSource µÄ BeanPropertySqlParameterSource ÊµÏÖÀà×÷Îª²ÎÊı¡£
+				 * ä½¿ç”¨å…·åå‚æ•°æ—¶å¯ä»¥ä½¿ç”¨ï¼Œupdate(String sql, SqlParameterSource paramSource) æ–¹æ³•è¿›è¡Œæ›´æ–°æ“ä½œ
+				 *1.SQL è¯­å¥ä¸­çš„å‚æ•°å’Œç±»çš„å±æ€§ä¸€è‡´
+				 *2.ä½¿ç”¨ SqlParameterSource çš„ BeanPropertySqlParameterSource å®ç°ç±»ä½œä¸ºå‚æ•°ã€‚
 				 */
 				@Test
 				public void testNamedParameterJdbcTemplate2() {
@@ -63,9 +63,9 @@ public class JDBCTest {
 				}
 				
 				/**
-				 * Ê¹ÓÃ¾ßÃû²ÎÊı£º¿ÉÒÔÎª²ÎÊıÆğÃû×Ö£¬
-				 * 1.ÓÅµã£ºÈôÓĞ¶à¸ö²ÎÊı£¬Ôò²»ÓÃÔÙÈ¥¶ÔÓ¦Î»ÖÃ£¬Ö±½Ó¶ÔÏó²ÎÊıÃû×Ö£¬±ãÓÚÎ¬»¤
-				 * 2.È±µã£º½ÏÎªÂé·³
+				 * ä½¿ç”¨å…·åå‚æ•°ï¼šå¯ä»¥ä¸ºå‚æ•°èµ·åå­—ï¼Œ
+				 * 1.ä¼˜ç‚¹ï¼šè‹¥æœ‰å¤šä¸ªå‚æ•°ï¼Œåˆ™ä¸ç”¨å†å»å¯¹åº”ä½ç½®ï¼Œç›´æ¥å¯¹è±¡å‚æ•°åå­—ï¼Œä¾¿äºç»´æŠ¤
+				 * 2.ç¼ºç‚¹ï¼šè¾ƒä¸ºéº»çƒ¦
 				 */
 				@Test 
 				public void testNamedParameterJdbcTemplate() {
@@ -91,7 +91,7 @@ public class JDBCTest {
 				
 				
 				/**
-				 * »ñÈ¡µ¥ÁĞÖµ£¬»ò×öÍ³¼Æ²éÑ¯
+				 * è·å–å•åˆ—å€¼ï¼Œæˆ–åšç»Ÿè®¡æŸ¥è¯¢
 				 */
 				@Test
 				public void testQueryForObject2() {
@@ -102,8 +102,8 @@ public class JDBCTest {
 				} 
 				
 				/**
-				 * ²éµ½ÊµÌåÀàµÄ¼¯ºÏ
-				 * ×¢Òâ£ºµ÷ÓÃµÄ²»ÊÇqueryForList ·½·¨
+				 * æŸ¥åˆ°å®ä½“ç±»çš„é›†åˆ
+				 * æ³¨æ„ï¼šè°ƒç”¨çš„ä¸æ˜¯queryForList æ–¹æ³•
 				 */
 				@Test
 				public void testQueryForList() {
@@ -117,12 +117,12 @@ public class JDBCTest {
 				
 				
 				/**
-				 * ´ÓÊı¾İ¿âÖĞµÃµ½Ò»Ìõ¼ÇÂ¼£¬Êµ¼ÊµÃµ½¶ÔÓ¦µÄÒ»¸ö¶ÔÏó
-				 *×¢Òâ²»ÊÇµ÷ÓÃÕâ¸ö queryForObject(String sql, Class<Employee> requiredType, Object... args)  ·½·¨£¡
-				 *ĞèÒªµ÷ÓÃ queryForObject(String sql, RowMapper<Employee> rowMapper, Object... args)
+				 * ä»æ•°æ®åº“ä¸­å¾—åˆ°ä¸€æ¡è®°å½•ï¼Œå®é™…å¾—åˆ°å¯¹åº”çš„ä¸€ä¸ªå¯¹è±¡
+				 *æ³¨æ„ä¸æ˜¯è°ƒç”¨è¿™ä¸ª queryForObject(String sql, Class<Employee> requiredType, Object... args)  æ–¹æ³•ï¼
+				 *éœ€è¦è°ƒç”¨ queryForObject(String sql, RowMapper<Employee> rowMapper, Object... args)
 				 *
-				 *1¡¢ÆäÖĞRowMapper Ö¸¶¨ÈçºÎÈ¥Ó³Éä½á¹û¼¯µÄĞĞ£¬³£ÓÃµÄÊµÏÖÀàÎªBeanPropertyRowMapper
-				 *2¡¢²»Ö§³Ö¼¶ÁªÊôĞÔ£¬JdbcTemplate µ½µ×ÊÇÒ»¸ö JDBC µÄĞ¡¹¤¾ß£¬¶ø²»ÊÇ ORM¿ò¼Ü
+				 *1ã€å…¶ä¸­RowMapper æŒ‡å®šå¦‚ä½•å»æ˜ å°„ç»“æœé›†çš„è¡Œï¼Œå¸¸ç”¨çš„å®ç°ç±»ä¸ºBeanPropertyRowMapper
+				 *2ã€ä¸æ”¯æŒçº§è”å±æ€§ï¼ŒJdbcTemplate åˆ°åº•æ˜¯ä¸€ä¸ª JDBC çš„å°å·¥å…·ï¼Œè€Œä¸æ˜¯ ORMæ¡†æ¶
 				 * 
 				 */
 				@Test
@@ -134,7 +134,7 @@ public class JDBCTest {
 				}
 				
 				/**
-				 * Ö´ĞĞÅúÁ¿¸üĞÂ£ºÅúÁ¿update£¬insert£¬delete
+				 * æ‰§è¡Œæ‰¹é‡æ›´æ–°ï¼šæ‰¹é‡updateï¼Œinsertï¼Œdelete
  				 */
 				@Test
 				public void testBatchUpdate() {
@@ -153,7 +153,7 @@ public class JDBCTest {
 				
 				
 				/**
-				 * Ö´ĞĞ insert£¬update£¬delete
+				 * æ‰§è¡Œ insertï¼Œupdateï¼Œdelete
 				 */
 				@Test
 				public void testUpdate() {

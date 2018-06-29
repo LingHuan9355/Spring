@@ -6,10 +6,10 @@ import java.util.List;
  * 
  * @Name  : Cashier
  * @Author : LH
- * @Date : 2018Äê6ÔÂ28ÈÕ ÏÂÎç11:48:51
+ * @Date : 2018å¹´6æœˆ28æ—¥ ä¸‹åˆ11:48:51
  * @Version : V1.0
  * 
- * @Description :ĞÂ¶¨Òå Cashier ½Ó¿Ú: ±íÊ¾¿Í»§µÄ½áÕË²Ù×÷
+ * @Description :æ–°å®šä¹‰ Cashier æ¥å£: è¡¨ç¤ºå®¢æˆ·çš„ç»“è´¦æ“ä½œ
  */
 public interface Cashier {
 	

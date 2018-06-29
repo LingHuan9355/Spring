@@ -14,7 +14,7 @@ import com.hr.spring.tx.exception.UserAccountException;
  * 
  * @Name  : BookShopServiceImpl
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}28~{HU~} ~{OBNg~}11:08:31
+ * @Date : 2018年6月28日 下午11:08:31
  * @Version : V1.0
  * 
  * @Description :
@@ -25,16 +25,16 @@ public class BookShopServiceImpl implements BookShopService {
 			@Autowired
 			private BookShopDao bookShopDao;
 			
-			//~{Lm<SJBNqW"=b~}
-			//1~{!"J9SC~}propagation ~{V86(JBNq5D4+2%PPN*#,<451G0JBNq7=7(1;AmMbR;8vJBNq7=7(5wSCJ1~}
-			//~{Hg:NJ9SCJBNq#,D,HOH!V5~} REQUIRED ~{#,<4J9SC5wSC7=7(5DJBNq~}
-			//REQUIRES_NEW:~{J9SCWT<:5DJBNq#,5wSC5DJBNq7=7(5DJBNq1;9RFp~}
-			//2~{!"J9SC~} isolation ~{V86(JBNq5D8t@k<61p#,Wn3#SC5DH!V5~}  READ_COMMITTED
-			//3~{!"D,HOGi?vOB~} Spring ~{5DIyCwJ=JBNq6TKySPTKPPJ1Rl3#=xPP;X9v#,R2?IRTM(9}6TS&5DJtPT=xPPIhVC!#~}
-			//~{M(3#Gi?vOBH%D,HOV5<4?I~}.
-			//4~{!"J9SC~}readOnly ~{V86(JBNqJG7qN*V;6A#,1mJ>Ub8vJBNqV;6AH!J}>]#,2;8|PBJ}>]#,~}
-			//~{UbQy?IRT0oVzJ}>]?bR}GfSE;/JBNq!#HtUf5DJGR;8vV;6AJ}>]?bV55D7=7(#,S&IhVC~}readOnly=true
-			//5~{!"J9SC~} timeout ~{V86(JBNqG?VF;X9vV.G0JBNq?IRTU<SC5DJ1<d~}
+			//添加事务注解
+			//1、使用propagation 指定事务的传播行为，即当前事务方法被另外一个事务方法调用时
+			//如何使用事务，默认取值 REQUIRED ，即使用调用方法的事务
+			//REQUIRES_NEW:使用自己的事务，调用的事务方法的事务被挂起
+			//2、使用 isolation 指定事务的隔离级别，最常用的取值  READ_COMMITTED
+			//3、默认情况下 Spring 的声明式事务对所有运行时异常进行回滚，也可以通过对应的属性进行设置。
+			//通常情况下去默认值即可.
+			//4、使用readOnly 指定事务是否为只读，表示这个事务只读取数据，不更新数据，
+			//这样可以帮助数据库引擎优化事务。若真的是一个只读数据库值的方法，应设置readOnly=true
+			//5、使用 timeout 指定事务强制回滚之前事务可以占用的时间
 			@Transactional(propagation =Propagation.REQUIRES_NEW,
 									isolation = Isolation.READ_COMMITTED,
 									readOnly = false,timeout=3)
@@ -42,18 +42,18 @@ public class BookShopServiceImpl implements BookShopService {
 			public void purchase(String username, String isbn) {
 				
 					try {
-						Thread.sleep(5000);//~{3,9}~}5~{CkJBNqG?VF;X9v~}
+						Thread.sleep(5000);//超过5秒事务强制回滚
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 				
-					//1.~{;qH!Ji5D5%<[~}
+					//1.获取书的单价
 					int price = bookShopDao.findBookPriceByIsbn(isbn);
 				
-					//2.~{8|PBJi5D?b4f~}
+					//2.更新书的库存
 					 bookShopDao.updateBookStock(isbn);
 				
-					//3.~{8|PBSC;'5DS`6n~}
+					//3.更新用户的余额
 					 bookShopDao.updateUserAccount(username, price);
 			}
 

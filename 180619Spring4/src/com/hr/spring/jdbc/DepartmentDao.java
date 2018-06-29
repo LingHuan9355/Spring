@@ -8,14 +8,15 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 
+
 /**
  * 
  * @Name  : DepartmentDao
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}28~{HU~} ~{IONg~}12:40:57
+ * @Date : 2018年6月28日 上午12:40:57
  * @Version : V1.0
  * 
- * @Description : ~{2;MF<vJ9SC~} JdbcDaoSupport ~{#,6xMF<vV1=SJ9SC~} JdbcTemplate ~{WwN*~}Dao ~{@`5D3IT11dA?~} 
+ * @Description : 不推荐使用 JdbcDaoSupport ，而推荐直接使用 JdbcTemplate 作为Dao 类的成员变量 
  */
 @Repository
 public class DepartmentDao extends JdbcDaoSupport{
