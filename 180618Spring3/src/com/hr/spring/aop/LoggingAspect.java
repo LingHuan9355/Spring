@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
  * 
  * @Name  : LoggingAspect
  * @Author : LH
- * @Date : 2018~{Dj~}6~{TB~}25~{HU~} ~{OBNg~}11:13:24
+ * @Date : 2018年6月25日 下午11:13:24
  * @Version : V1.0
  * 
  * @Description :
@@ -30,16 +30,16 @@ import org.springframework.stereotype.Component;
 public class LoggingAspect {
 
 					/**
-					 * ~{6(ReR;8v7=7(#,SCSZIyCwGPHk5c1m4oJ=#,R;0c5X8C7=7(VPTYR22;PhR*Lm<SFdK{5D4zBk~}
-					 * ~{J9SC~} @Pointcut  ~{@4IyCwGPHk5c1m4oJ=!#~}
-					 * ~{:sCf5DFdK{M(V*V1=SJ9SC7=7(C{@4R}Hk51G05DGPHk5c1m4oJ=!#~}
+					 * 定义一个方法，用于声明切入点表达式，一般地该方法中再也不需要添加其他的代码
+					 * 使用 @Pointcut  来声明切入点表达式。
+					 * 后面的其他通知直接使用方法名来引入当前的切入点表达式。
 					 */
 					@Pointcut("execution(public int com.hr.spring.aop.ArithmeticCalculator.*(..))")
 					public void declareJointPointExpression() {}
 	
 	
 					/**
-					 * ~{TZ~}int com.hr.spring.aop.ArithmeticCalculator  ~{=S?Z5DC?R;8vJ5OV@`5DC?R;8v7=7(?*J<V.G0V4PP5DR;6N4zBk~}
+					 * 在int com.hr.spring.aop.ArithmeticCalculator  接口的每一个实现类的每一个方法开始之前执行的一段代码
 					 */
 					@Before("declareJointPointExpression()")
 					public void beforeMethod(JoinPoint joinPoint) {
@@ -49,7 +49,7 @@ public class LoggingAspect {
 					}
 					
 					/**
-					 * ~{TZ7=7(V4PPV.:sV4PP5D4zBk#,N^B[7=7(JG7q3vOVRl3#~}
+					 * 在方法执行之后执行的代码，无论方法是否出现异常
 					 * @param joinPoint
 					 */
 					@After("declareJointPointExpression()")
@@ -59,7 +59,7 @@ public class LoggingAspect {
 					}
 					
 					/**
-					 * ~{TZ7=7(U}3#=aJxJ\V4PP5D4zBk#,75;XM(V*JG?IRT75;X7=7(5D75;XV5#!~}
+					 * 在方法正常结束受执行的代码，返回通知是可以返回方法的返回值！
 					 * @param joinPoint
 					 * @param result
 					 */
@@ -70,7 +70,7 @@ public class LoggingAspect {
 					}
 
 					/**
-					 * ~{TZD?1j7=7(3vOVRl3#J1;aV4PP5D4zBk#,?IRT7CNJ5=Rl3#6TOs#;GR?IRTV86(TZ3vOVLX6(Rl3#J1TZV4PPM(V*4zBk~}
+					 * 在目标方法出现异常时会执行的代码，可以访问到异常对象；且可以指定在出现特定异常时在执行通知代码
 					 * @param joinPoint
 					 * @param ex
 					 */
@@ -81,9 +81,9 @@ public class LoggingAspect {
 					}
 					
 					/**
-					 * ~{;7HFM(V*PhR*P/4x~} ProceedingJoinPoint ~{2NJ}#,~}
-					 * ~{;7HFM(V*@`KFSZ6/L,4z@m5DH+9}3L#:~}ProceedingJoinPoint ~{@`PM5D2NJ}?IRT>v6(JG7qV4PPD?1j7=7(#,~}
-					 * ~{GR;7HFM(V*1XPkR*SP75;XV5#,75;XV5<4N*D?1j7=7(5D75;XV5~}
+					 * 环绕通知需要携带 ProceedingJoinPoint 参数，
+					 * 环绕通知类似于动态代理的全过程：ProceedingJoinPoint 类型的参数可以决定是否执行目标方法，
+					 * 且环绕通知必须要有返回值，返回值即为目标方法的返回值
 					 * @param pjd
 					 */
 					/*@Around("declareJointPointExpression()")
@@ -92,19 +92,19 @@ public class LoggingAspect {
 							String methodName = pjd.getSignature().getName();
 
 						    try {
-						    		//~{G0VCM(V*~}
+						    		//前置通知
 						    	System.out.println("The method " + methodName + " begins with " + Arrays.asList(pjd.getArgs()));
-						    	//~{V4PPD?1j7=7(~}
+						    	//执行目标方法
 						    	 result = pjd.proceed();
-						    	// 	~{:sVCM(V*~}
+						    	// 	后置通知
 						    	 System.out.println("The method  "+ methodName +" ends with " + result);
 							} catch (Throwable e) {
-								//~{Rl3#M(V*~}
+								//异常通知
 								System.out.println("The method " + methodName + "occurs exception: " + e);
 								throw new RuntimeException(e);
 							}
 						    
-						    //~{:sVCM(V*~}
+						    //后置通知
 						    System.out.println("The method " + methodName + " ends ");
 							
 							

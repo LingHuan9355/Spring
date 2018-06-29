@@ -3,16 +3,12 @@ package com.hr.spring.aop.xml;
 import java.util.Arrays;
 
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.springframework.core.annotation.Order;
-import org.springframework.stereotype.Component;
 
 /**
  * 
  * @Name  : ValidationAspect
  * @Author : LH
- * @Date : 2018Äê6ÔÂ26ÈÕ ÉÏÎç12:53:02
+ * @Date : 2018å¹´6æœˆ26æ—¥ ä¸Šåˆ12:53:02
  * @Version : V1.0
  * 
  * @Description :

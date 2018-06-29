@@ -7,10 +7,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @Name  : TestAdvice1
  * @Author : LH
- * @Date : 2018Äê6ÔÂ25ÈÕ ÏÂÎç11:04:32
+ * @Date : 2018å¹´6æœˆ25æ—¥ ä¸‹åˆ11:04:32
  * @Version : V1.0
  * 
- * @Description :   Spring_·µ»ØÍ¨Öª&Òì³£Í¨Öª&»·ÈÆÍ¨Öª
+ * @Description :   Spring_è¿”å›é€šçŸ¥&å¼‚å¸¸é€šçŸ¥&ç¯ç»•é€šçŸ¥
  */
 public class TestAdvice1 {
 				

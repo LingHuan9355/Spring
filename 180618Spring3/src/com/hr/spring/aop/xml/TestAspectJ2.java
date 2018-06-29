@@ -7,10 +7,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @Name  : TestAspectJ2
  * @Author : LH
- * @Date : 2018Äê6ÔÂ26ÈÕ ÉÏÎç12:52:44
+ * @Date : 2018å¹´6æœˆ26æ—¥ ä¸Šåˆ12:52:44
  * @Version : V1.0
  * 
- * @Description :ÓÃ»ùÓÚ XML µÄÅäÖÃÉùÃ÷ÇĞÃæ
+ * @Description :ç”¨åŸºäº XML çš„é…ç½®å£°æ˜åˆ‡é¢
  */
 public class TestAspectJ2 {
 				

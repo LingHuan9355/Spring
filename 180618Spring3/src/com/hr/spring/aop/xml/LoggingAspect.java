@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
  * 
  * @Name  : LoggingAspect
  * @Author : LH
- * @Date : 2018Äê6ÔÂ26ÈÕ ÉÏÎç12:52:54
+ * @Date : 2018å¹´6æœˆ26æ—¥ ä¸Šåˆ12:52:54
  * @Version : V1.0
  * 
  * @Description :
@@ -51,19 +51,19 @@ public class LoggingAspect {
 							String methodName = pjd.getSignature().getName();
 
 						    try {
-						    		//Ç°ÖÃÍ¨Öª
+						    		//å‰ç½®é€šçŸ¥
 						    	System.out.println("The method " + methodName + " begins with " + Arrays.asList(pjd.getArgs()));
-						    	//Ö´ĞĞÄ¿±ê·½·¨
+						    	//æ‰§è¡Œç›®æ ‡æ–¹æ³•
 						    	 result = pjd.proceed();
-						    	// 	ºóÖÃÍ¨Öª
+						    	// 	åç½®é€šçŸ¥
 						    	 System.out.println("The method  "+ methodName +" ends with " + result);
 							} catch (Throwable e) {
-								//Òì³£Í¨Öª
+								//å¼‚å¸¸é€šçŸ¥
 								System.out.println("The method " + methodName + "occurs exception: " + e);
 								throw new RuntimeException(e);
 							}
 						    
-						    //ºóÖÃÍ¨Öª
+						    //åç½®é€šçŸ¥
 						    System.out.println("The method " + methodName + " ends ");
 							
 							

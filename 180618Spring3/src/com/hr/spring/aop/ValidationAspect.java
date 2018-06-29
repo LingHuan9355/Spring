@@ -12,10 +12,10 @@ import org.springframework.stereotype.Component;
  * 
  * @Name  : ValidationAspect
  * @Author : LH
- * @Date : 2018Äê6ÔÂ26ÈÕ ÉÏÎç12:07:07
+ * @Date : 2018å¹´6æœˆ26æ—¥ ä¸Šåˆ12:07:07
  * @Version : V1.0
  * 
- * @Description : Ê¹ÓÃ @Order ×¢½âÖ¸¶¨ÇĞÃæµÄÓÅÏÈ¼¶£¬ÖµÔ½Ğ¡ÓÅÏÈ¼¶Ô½¸ß
+ * @Description : ä½¿ç”¨ @Order æ³¨è§£æŒ‡å®šåˆ‡é¢çš„ä¼˜å…ˆçº§ï¼Œå€¼è¶Šå°ä¼˜å…ˆçº§è¶Šé«˜
  */
 @Order(1)
 @Aspect
