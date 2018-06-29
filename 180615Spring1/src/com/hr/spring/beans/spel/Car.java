@@ -5,7 +5,7 @@ public class Car {
 	
 	    private String brand;
 	    private double price;
-	    //ÂÖÌ¥µÄÖÜ³¤
+	    //è½®èƒçš„å‘¨é•¿
 	    private double tyrePerimeter;
 		
 	    public Car() {

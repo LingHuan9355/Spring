@@ -9,10 +9,10 @@ import com.hr.spring.beans.annotation.service.UserService;
  * 
  * @Name  : UserController
  * @Author : LH
- * @Date : 2018Äê6ÔÂ24ÈÕ ÏÂÎç6:27:01
+ * @Date : 2018å¹´6æœˆ24æ—¥ ä¸‹åˆ6:27:01
  * @Version : V1.0
  * 
- * @Description : ¿ØÖÆ²ã
+ * @Description : æ§åˆ¶å±‚
  */
 
 @Controller

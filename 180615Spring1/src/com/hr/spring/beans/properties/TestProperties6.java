@@ -14,7 +14,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @Name  : TestProperties6
  * @Author : LH
- * @Date : 2018Äê6ÔÂ19ÈÕ ÏÂÎç11:31:37
+ * @Date : 2018å¹´6æœˆ19æ—¥ ä¸‹åˆ11:31:37
  * @Version : V1.0
  * 
  * @Description :

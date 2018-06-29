@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
  * 
  * @Name  : UserRepository
  * @Author : LH
- * @Date : 2018Äê6ÔÂ25ÈÕ ÏÂÎç12:41:17
+ * @Date : 2018å¹´6æœˆ25æ—¥ ä¸‹åˆ12:41:17
  * @Version : V1.0
  * 
  * @Description :

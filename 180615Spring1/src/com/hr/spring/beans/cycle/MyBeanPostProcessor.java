@@ -7,11 +7,10 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
  * 
  * @Name  : MyBeanPostProcessor
  * @Author : LH
- * @Date : 2018Äê6ÔÂ20ÈÕ ÉÏÎç1:01:09
+ * @Date : 2018å¹´6æœˆ20æ—¥ ä¸Šåˆ1:01:09
  * @Version : V1.0
  * 
- * @Description :Ìí¼Ó Bean ºóÖÃ´¦ÀíÆ÷ºó Bean µÄÉúÃüÖÜÆÚ
- * 
+ * @Description :æ·»åŠ  Bean åç½®å¤„ç†å™¨å Bean çš„ç”Ÿå‘½å‘¨æœŸ
  * 
  */
 public class MyBeanPostProcessor implements BeanPostProcessor {

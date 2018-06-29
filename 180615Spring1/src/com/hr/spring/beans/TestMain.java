@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @Name  : TestMain
  * @Author : LH
- * @Date : 2018Äê6ÔÂ18ÈÕ ÏÂÎç5:27:09
+ * @Date : 2018å¹´6æœˆ18æ—¥ ä¸‹åˆ5:27:09
  * @Version : V1.0
  * 
  * @Description :
@@ -17,26 +17,26 @@ public class TestMain {
 		
 				 @Test
 				 public void testSpring() {
-				   //´´½¨HelloWorldµÄÒ»¸ö¶ÔÏó
+				   //åˆ›å»ºHelloWorldçš„ä¸€ä¸ªå¯¹è±¡
 				  // HelloWorld heWorld = new HelloWorld();
-				   //ÎªnameµÄÊôĞÔ¸³Öµ
+				   //ä¸ºnameçš„å±æ€§èµ‹å€¼
 				   //heWorld.setName("Carl");
-				   //µ÷ÓÃhelloµÄ·½·¨
+				   //è°ƒç”¨helloçš„æ–¹æ³•
 				   //heWorld.hello();
 				   
-				   //1.´´½¨Spring µÄ IOC ÈİÆ÷¶ÔÏó
-					 //ApplicationContext ´ú±íIOC ÈİÆ÷
-					 //ClassPathXmlApplicationContext :ÊÇApplicationContext ½Ó¿ÚµÄÊµÏÖÀà£¬¸ÃÊµÏÖÀà´ÓÀàÂ·¾¶ÏÂÀ´¼ÓÔØÅäÖÃÎÄ¼ş¡£
+				   //1.åˆ›å»ºSpring çš„ IOC å®¹å™¨å¯¹è±¡
+					 //ApplicationContext ä»£è¡¨IOC å®¹å™¨
+					 //ClassPathXmlApplicationContext :æ˜¯ApplicationContext æ¥å£çš„å®ç°ç±»ï¼Œè¯¥å®ç°ç±»ä»ç±»è·¯å¾„ä¸‹æ¥åŠ è½½é…ç½®æ–‡ä»¶ã€‚
 				   ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 				   
-				   //2.´ÓIOC ÈİÆ÷ÖĞ»ñÈ¡BeanÊµÀı
-				   //ÀûÓÃid ¶¨Î»µ½IOCÈİÆ÷ÖĞµÄbean
+				   //2.ä»IOC å®¹å™¨ä¸­è·å–Beanå®ä¾‹
+				   //åˆ©ç”¨id å®šä½åˆ°IOCå®¹å™¨ä¸­çš„bean
 			      HelloWorld helloWorld = (HelloWorld) context.getBean("helloWorld2");
-				  //ÀûÓÃÀàĞÍ·µ»Ø IOC ÈİÆ÷ÖĞµÄBean £¬µ«ÒªÇóIOCÈİÆ÷ÖĞÖ»ÄÜÓĞÒ»¸ö¸ÃÀàĞÍµÄBean
+				  //åˆ©ç”¨ç±»å‹è¿”å› IOC å®¹å™¨ä¸­çš„Bean ï¼Œä½†è¦æ±‚IOCå®¹å™¨ä¸­åªèƒ½æœ‰ä¸€ä¸ªè¯¥ç±»å‹çš„Bean
 			      //HelloWorld helloWorld =  context.getBean(HelloWorld.class);
 			      System.out.println(helloWorld);
 				   
-				   //3.µ÷ÓÃhelloµÄ·½·¨
+				   //3.è°ƒç”¨helloçš„æ–¹æ³•
 			    //  helloWorld.hello();
 			      
 			      Car car = (Car) context.getBean("car");

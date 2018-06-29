@@ -7,10 +7,10 @@ import java.util.Map;
  * 
  * @Name  : InstanceCarFactory
  * @Author : LH
- * @Date : 2018Äê6ÔÂ24ÈÕ ÉÏÎç12:22:42
+ * @Date : 2018å¹´6æœˆ24æ—¥ ä¸Šåˆ12:22:42
  * @Version : V1.0
  * 
- * @Description :ÊµÀı¹¤³§·½·¨£ºÊµÀı¹¤³§µÄ·½·¨£¬¼´ĞèÒª´´½¨¹¤³§±¾Éí£¬ÔÙµ÷ÓÃ¹¤³§µÄÊµÀı·½·¨À´·µ»ØbeanµÄÊµÀı
+ * @Description :å®ä¾‹å·¥å‚æ–¹æ³•ï¼šå®ä¾‹å·¥å‚çš„æ–¹æ³•ï¼Œå³éœ€è¦åˆ›å»ºå·¥å‚æœ¬èº«ï¼Œå†è°ƒç”¨å·¥å‚çš„å®ä¾‹æ–¹æ³•æ¥è¿”å›beançš„å®ä¾‹
  */
 public class InstanceCarFactory {
 
@@ -18,11 +18,11 @@ public class InstanceCarFactory {
 
 			public InstanceCarFactory (){
 				cars = new HashMap<String, Car>();
-				cars.put("±¦Âí", new Car("±¦Âí",3000000));
-				cars.put("±¼³Û", new Car("±¼³Û",4000000));
+				cars.put("ï¿½ï¿½ï¿½ï¿½", new Car("ï¿½ï¿½ï¿½ï¿½",3000000));
+				cars.put("ï¿½ï¿½ï¿½ï¿½", new Car("ï¿½ï¿½ï¿½ï¿½",4000000));
 			}
 			
-			//ÊµÀı¹¤³§·½·¨
+			//Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			public  Car getCar(String brand) {
 				return cars.get(brand);
 			}

@@ -6,11 +6,11 @@ import org.springframework.beans.factory.FactoryBean;
  * 
  * @Name  : CarFactoryBean
  * @Author : LH
- * @Date : 2018Äê6ÔÂ24ÈÕ ÉÏÎç12:28:50
+ * @Date : 2018å¹´6æœˆ24æ—¥ ä¸Šåˆ12:28:50
  * @Version : V1.0
  * 
- * @Description : ÊµÏÖ FactoryBean ½Ó¿ÚÔÚ Spring IOC ÈİÆ÷ÖĞÅäÖÃ Bean
- *     ×Ô¶¨ÒåµÄFactoryBean ĞèÒªÊµÏÖ FactoryBean½Ó¿Ú
+ * @Description : å®ç° FactoryBean æ¥å£åœ¨ Spring IOC å®¹å™¨ä¸­é…ç½® Bean
+ *     è‡ªå®šä¹‰çš„FactoryBean éœ€è¦å®ç° FactoryBeanæ¥å£
  */
 public class CarFactoryBean  implements FactoryBean<Car>{
 
@@ -21,7 +21,7 @@ public class CarFactoryBean  implements FactoryBean<Car>{
 	}
 
 	/**
-	 * ·µ»Ø bean µÄ¶ÔÏó
+	 * ï¿½ï¿½ï¿½ï¿½ bean ï¿½Ä¶ï¿½ï¿½ï¿½
 	 */
 	@Override
 	public Car getObject() throws Exception {
@@ -29,7 +29,7 @@ public class CarFactoryBean  implements FactoryBean<Car>{
 	}
 
 	/**
-	 * ·µ»Ø bean µÄÀàĞÍ
+	 * ï¿½ï¿½ï¿½ï¿½ bean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	@Override
 	public Class<?> getObjectType() {
@@ -37,7 +37,7 @@ public class CarFactoryBean  implements FactoryBean<Car>{
 	}
 
 	/**
-	 * FactoryBean ·µ»ØµÄÊµÀıÊÇ·ñÎªµ¥Àı
+	 * FactoryBean ï¿½ï¿½ï¿½Øµï¿½Êµï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½ï¿½ï¿½ï¿½
 	 */
 	@Override
 	public boolean isSingleton() {

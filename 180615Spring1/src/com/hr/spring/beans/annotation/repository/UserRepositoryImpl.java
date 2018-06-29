@@ -9,7 +9,7 @@ import com.hr.spring.beans.annotation.TestObject;
  * 
  * @Name  : UserRepositoryImpl
  * @Author : LH
- * @Date : 2018Äê6ÔÂ24ÈÕ ÏÂÎç6:29:55
+ * @Date : 2018å¹´6æœˆ24æ—¥ ä¸‹åˆ6:29:55
  * @Version : V1.0
  * 
  * @Description :

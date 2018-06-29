@@ -10,10 +10,10 @@ import com.hr.spring.beans.annotation.repository.UserRepository;
  * 
  * @Name  : UserService
  * @Author : LH
- * @Date : 2018Äê6ÔÂ24ÈÕ ÏÂÎç6:31:51
+ * @Date : 2018å¹´6æœˆ24æ—¥ ä¸‹åˆ6:31:51
  * @Version : V1.0
  * 
- * @Description :ÒµÎñÂß¼­²ã
+ * @Description :ä¸šåŠ¡é€»è¾‘å±‚
  */
 
 @Service

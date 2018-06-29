@@ -10,19 +10,19 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *  
  * @Name  : TestFactory9
  * @Author : LH
- * @Date : 2018Äê6ÔÂ24ÈÕ ÉÏÎç12:06:21
+ * @Date : 2018å¹´6æœˆ24æ—¥ ä¸Šåˆ12:06:21
  * @Version : V1.0
  * 
- * @Description :Í¨¹ýµ÷ÓÃ¾²Ì¬¹¤³§·½·¨´´½¨ Bean
+ * @Description :é€šè¿‡è°ƒç”¨é™æ€å·¥åŽ‚æ–¹æ³•åˆ›å»º Bean
  * 
- * µ÷ÓÃ¾²Ì¬¹¤³§·½·¨´´½¨ BeanÊÇ½«¶ÔÏó´´½¨µÄ¹ý³Ì·â×°µ½¾²Ì¬·½·¨ÖÐ. 
- * µ±¿Í»§¶ËÐèÒª¶ÔÏóÊ±, Ö»ÐèÒª¼òµ¥µØµ÷ÓÃ¾²Ì¬·½·¨, ¶ø²»Í¬¹ØÐÄ´´½¨¶ÔÏóµÄÏ¸½Ú.
+ * è°ƒç”¨é™æ€å·¥åŽ‚æ–¹æ³•åˆ›å»º Beanæ˜¯å°†å¯¹è±¡åˆ›å»ºçš„è¿‡ç¨‹å°è£…åˆ°é™æ€æ–¹æ³•ä¸­. 
+ * å½“å®¢æˆ·ç«¯éœ€è¦å¯¹è±¡æ—¶, åªéœ€è¦ç®€å•åœ°è°ƒç”¨é™æ€æ–¹æ³•, è€Œä¸åŒå…³å¿ƒåˆ›å»ºå¯¹è±¡çš„ç»†èŠ‚.
  *
- * Bean µÄÅäÖÃ·½Ê½£º
- *  1.Í¨¹ýÈ«ÀàÃû£¨·´Éä£©¡¢
- *  2.Í¨¹ý¹¤³§·½·¨£¨¾²Ì¬¹¤³§·½·¨ & ÊµÀý¹¤³§·½·¨£©¡¢
+ * Bean çš„é…ç½®æ–¹å¼ï¼š
+ *  1.é€šè¿‡å…¨ç±»åï¼ˆåå°„ï¼‰ã€
+ *  2.é€šè¿‡å·¥åŽ‚æ–¹æ³•ï¼ˆé™æ€å·¥åŽ‚æ–¹æ³• & å®žä¾‹å·¥åŽ‚æ–¹æ³•ï¼‰ã€
  *  3.FactoryBean
-
+ *  
  */
 public class TestFactory9 {
 

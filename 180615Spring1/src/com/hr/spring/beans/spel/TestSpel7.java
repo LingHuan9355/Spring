@@ -9,13 +9,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * 
  * @Name  : TestSpel7
  * @Author : LH
- * @Date : 2018Äê6ÔÂ20ÈÕ ÉÏÎç12:15:37
+ * @Date : 2018å¹´6æœˆ20æ—¥ ä¸Šåˆ12:15:37
  * @Version : V1.0
  * 
- * @Description :SpEL£º
- * 1.×ÖÃæÁ¿
- * 2.ÒıÓÃ Bean¡¢ÊôĞÔºÍ·½·¨
- * 3.Ö§³ÖµÄÔËËã·ûºÅ
+ * @Description :SpELï¼š
+ * 1.å­—é¢é‡
+ * 2.å¼•ç”¨ Beanã€å±æ€§å’Œæ–¹æ³•
+ * 3.æ”¯æŒçš„è¿ç®—ç¬¦å·
  */
 public class TestSpel7 {
 

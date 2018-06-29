@@ -7,11 +7,11 @@ public class Person {
 	  	private String name;
 	  	private Car car;
 		
-	  	//ÒıÓÃaddress  bean µÄ city ÊôĞÔ
+	  	//å¼•ç”¨address  bean çš„ city å±æ€§
 	  	private String city;
 	  	
-	  	//¸ù¾İcar µÄprice È·¶¨info£ºcar µÄprice >= 300000 :½ğÁì
-	  	//·ñÔòÎª:°×Áì
+	  	//æ ¹æ®car çš„price ç¡®å®šinfoï¼šcar çš„price >= 300000 :é‡‘é¢†
+	  	//å¦åˆ™ä¸º:ç™½é¢†
 	  	private String info;
 	  	
 	  	public String getName() {

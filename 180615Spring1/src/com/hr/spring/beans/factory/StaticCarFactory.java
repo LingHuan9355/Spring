@@ -7,10 +7,10 @@ import java.util.Map;
  * 
  * @Name  : StaticCarFactory
  * @Author : LH
- * @Date : 2018Äê6ÔÂ23ÈÕ ÏÂÎç11:54:23
+ * @Date : 2018å¹´6æœˆ23æ—¥ ä¸‹åˆ11:54:23
  * @Version : V1.0
  * 
- * @Description : ¾²Ì¬¹¤³§·½·¨£ºÖ±½Óµ÷ÓÃÄ³Ò»¸öÀàµÄ¾²Ì¬·½·¨¾Í¿ÉÒÔ·µ»Ø Bean µÄÊµÀı
+ * @Description : é™æ€å·¥å‚æ–¹æ³•ï¼šç›´æ¥è°ƒç”¨æŸä¸€ä¸ªç±»çš„é™æ€æ–¹æ³•å°±å¯ä»¥è¿”å› Bean çš„å®ä¾‹
  */
 public class StaticCarFactory {
 
@@ -21,7 +21,7 @@ public class StaticCarFactory {
 				cars.put("Ford", new Car("Ford",400000));
 			}
 			
-			//¾²Ì¬¹¤³§·½·¨
+			//ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			public static Car getCar(String name) {
 				return cars.get(name);
 			}

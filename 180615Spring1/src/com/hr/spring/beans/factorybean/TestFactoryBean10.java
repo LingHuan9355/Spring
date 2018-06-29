@@ -6,18 +6,19 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
+
 /**
  * 
  * @Name  : TestFactoryBean9
  * @Author : LH
- * @Date : 2018Äê6ÔÂ24ÈÕ ÉÏÎç12:35:11
+ * @Date : 2018å¹´6æœˆ24æ—¥ ä¸Šåˆ12:35:11
  * @Version : V1.0
  * 
- * @Description :ÊµÏÖ FactoryBean ½Ó¿ÚÔÚ Spring IOC ÈİÆ÷ÖĞÅäÖÃ Bean
+ * @Description :å®ç° FactoryBean æ¥å£åœ¨ Spring IOC å®¹å™¨ä¸­é…ç½® Bean
  * 
- * Bean µÄÅäÖÃ·½Ê½£º
- *  1.Í¨¹ıÈ«ÀàÃû£¨·´Éä£©¡¢
- *  2.Í¨¹ı¹¤³§·½·¨£¨¾²Ì¬¹¤³§·½·¨ & ÊµÀı¹¤³§·½·¨£©¡¢
+ * Bean çš„é…ç½®æ–¹å¼ï¼š
+ *  1.é€šè¿‡å…¨ç±»åï¼ˆåå°„ï¼‰ã€
+ *  2.é€šè¿‡å·¥å‚æ–¹æ³•ï¼ˆé™æ€å·¥å‚æ–¹æ³• & å®ä¾‹å·¥å‚æ–¹æ³•ï¼‰ã€
  *  3.FactoryBean
  */
 public class TestFactoryBean10 {
