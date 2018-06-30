@@ -1,0 +1,41 @@
+1. Spring 整合 Hibernate 整合什么 ?
+	1）、由 IOC 容器来管理 hibernate的 sessionFactory
+	2）、让 hibernate 使用上 spring的声明式事务
+
+2、整合步骤：
+	1). 加入 hibernate
+		①. jar 包
+		
+				antlr-2.7.7.jar
+				dom4j-1.6.1.jar
+				hibernate-commons-annotations-4.0.2.Final.jar
+				hibernate-core-4.2.4.Final.jar
+				hibernate-jpa-2.0-api-1.0.1.Final.jar
+				javassist-3.15.0-GA.jar
+				jboss-logging-3.1.0.GA.jar
+				jboss-transaction-api_1.1_spec-1.0.1.Final.jar
+		
+		②. 添加 hibernate 的配置文件: hibernate.cfg.xml
+		③. 编写了持久化类对应的 .hbm.xml 文件。 
+
+	2). 加入 Spring
+		①. jar 包
+				com.springsource.org.aopalliance-1.0.0.jar
+				com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar
+				spring-aspects-4.0.0.RELEASE.jar
+				commons-logging-1.1.3.jar
+				
+				spring-aop-4.0.0.RELEASE.jar
+				spring-beans-4.0.0.RELEASE.jar
+				spring-context-4.0.0.RELEASE.jar
+				spring-core-4.0.0.RELEASE.jar
+				spring-expression-4.0.0.RELEASE.jar
+		②. 加入 Spring 的配置文件
+		
+    3）、连接数据库的驱动jar 包
+    	c3p0-0.9.1.2.jar
+    	mysql-connector-java-5.1.7-bin.jar
+	
+	4). 整合.
+
+3. 编写代码

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    
+    		<!--	配置 hibernate 的基本属性  -->
+    		<!--	1.数据源需配置到 IOC 容器中，所以在此处不需要配置数据源  -->
+    		<!--	2.关联的 .hbm.xml 也在 IOC 容器配置 SessionFactory 实例时再进行配置 -->
+    		<!--	3.配置 hibernate 的基本属性：方言，SQL显示以及格式化，生成数据表的策略以及二级缓存等 -->
+    	
+    		<!-- 方言：指定数据库所使用的 SQL 方言InnoDB -->
+    		<property name="hibernate.dialect" >org.hibernate.dialect.MySQL5InnoDBDialect</property>
+    		<!-- 指定程序运行时是否在控制台输出 SQL 语句 -->
+    		<property name="hibernate.show_sql" >true</property>
+    		<!-- 指定是否对输出 SQL 语句进行格式化 -->
+    		<property name="hibernate.format_sql" >true</property>
+    		<!-- 指定程序运行时是否在数据库自动生成数据表 -->
+    		<property name="hibernate.hbm2ddl.auto" >update</property>
+    		
+    		<!-- 配置hibernate 二级缓存相关属性 -->
+    		<!-- 指定程序需要关联的映射文件 -->
+    		
+    </session-factory>
+</hibernate-configuration>
