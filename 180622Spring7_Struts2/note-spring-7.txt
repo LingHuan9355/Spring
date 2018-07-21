@@ -50,19 +50,19 @@ spring-webmvc-4.0.0.RELEASE.jar
 2). 如何进行整合 ? 
 
 ①. 正常加入 Struts2
-	   asm-3.3.jar
-       asm-commons-3.3.jar
-       asm-tree-3.3.jar
+	   	asm-3.3.jar
+     	  	asm-commons-3.3.jar
+      		asm-tree-3.3.jar
        
-       commons-fileupload-1.3.jar
+      		commons-fileupload-1.3.jar
 		commons-io-2.0.1.jar
 		commons-lang3-3.1.jar
 		freemarker-2.3.19.jar
 		javassist-3.11.0.GA.jar
 		log4j-1.2.17.jar
 		ognl-3.0.6.jar
-       struts2-core-2.3.15.3.jar
-       xwork-core-2.3.15.3.jar
+       		struts2-core-2.3.15.3.jar
+      		xwork-core-2.3.15.3.jar
        
        
 ②. 在 Spring 的 IOC 容器中配置 Struts2 的 Action
@@ -83,7 +83,7 @@ spring-webmvc-4.0.0.RELEASE.jar
 ④. 加入 struts2-spring-plugin-2.3.15.3.jar
 
 3). 整合原理: 通过添加 struts2-spring-plugin-2.3.15.3.jar 以后, Struts2 会先从 IOC 容器中
-获取 Action 的实例.
+获取 Action 的实例.否则再反射创建.
 
 if (appContext.containsBean(beanName)) {
     o = appContext.getBean(beanName);

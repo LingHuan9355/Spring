@@ -39,7 +39,7 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-4.0.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-4.0.0.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-core-2.3.15.3.jar"/>
-	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-spring-plugin-2.3.15.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts2-spring-plugin-2.3.15.3.jar" sourcepath="E:/libs/Spring_SpringMVC_Mybatis_Hibernate_Struts/SSMH/Struts/struts2/2.3.20.3/struts-2.3.20.3-all.zip"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xwork-core-2.3.15.3.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
