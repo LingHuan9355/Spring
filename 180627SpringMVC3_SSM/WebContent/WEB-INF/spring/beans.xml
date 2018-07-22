@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+					http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+					http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd 
+					http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd 
+					http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd ">
+	
+		 <!-- 为了系统能够识别相应的注解。 -->
+		 <context:annotation-config/>
+	
+		<!-- 扫描注解 -->
+		<context:component-scan base-package="com.hr"/>
+	
+		 <!-- 配置数据源 -->
+		 <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		 		<property name="url" value="jdbc:mysql://localhost:3306/springMVC_hr?characterEncoding=utf8" />
+		 		<property name="username" value="root" />
+		 		<property name="password" value="admin" />
+		 </bean>
+	
+		<!-- 配置session工厂 -->
+		<bean  id="sqlsessionfactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+				<property name="dataSource" ref="ds"/>
+		</bean>
+		
+		<!-- 找到sql语句的映射文件 -->
+		<bean id="config" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+				<property name="sqlSessionFactory" ref="sqlsessionfactory"/>
+				<property name="basePackage" value="com.hr.dao"></property>
+		</bean>
+		
+		<!-- 配置事物 -->
+		<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+				<property name="dataSource" ref="ds"></property>
+		</bean>
+		
+		<!-- 3.2.声明事物管理器怎么干活，即这个切面的advice -->
+		<tx:advice id="txAdavice" transaction-manager="txManager">
+				<tx:attributes>
+				<!-- 以add开头的方法，开启事物 -->
+					<tx:method name="add*" propagation="REQUIRED"/>
+					<tx:method name="upd*" propagation="REQUIRED"/>
+					<tx:method name="del*" propagation="REQUIRED"/>
+					<!-- 以get开头的方法，对数据库只读不写 -->
+					<tx:method name="get*" read-only="true"/>
+				</tx:attributes>
+		</tx:advice>
+		
+		<!-- 3.3找切入点 -->
+		<aop:config>
+				<aop:pointcut expression="execution(* com.hr.service.*.*(..))" id="mypointcut"/>
+				<aop:advisor advice-ref="txAdavice" pointcut-ref="mypointcut"/>
+		</aop:config>
+		
+	</beans>
